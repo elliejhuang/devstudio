@@ -1,0 +1,26 @@
+{
+  "name": "devstudio",
+  "version": "0.1.0",
+  "description": "A dev-only overlay for annotating a page in place and checking it at real breakpoints, then handing the result to an AI coding agent as Markdown.",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/devstudio.js",
+  "exports": {
+    ".": "./dist/devstudio.js",
+    "./dist/devstudio.js": "./dist/devstudio.js"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "demo": "vite --config vite.demo.config.ts"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0"
+  }
+}
