@@ -55,7 +55,7 @@ doesn't care what your project is built with.
 ### Bookmarklet — any page, including ones you don't control
 
 ```js
-javascript:(()=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/YOUR-USER/devstudio@main/dist/devstudio.js';document.head.appendChild(s)})()
+javascript:(()=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/elliejhuang/devstudio@main/dist/devstudio.js';document.head.appendChild(s)})()
 ```
 
 Save that as a bookmark. This is the only form that works against a deployed
@@ -64,7 +64,7 @@ site, or on a phone, without a dev server.
 ### As a dependency
 
 ```sh
-npm i -D github:YOUR-USER/devstudio
+npm i -D github:elliejhuang/devstudio
 ```
 
 ```js
@@ -114,3 +114,9 @@ npm run build     # → dist/devstudio.js
 
 One IIFE, ~66kb gzipped, styles inlined. Single file on purpose: a bookmarklet
 has nowhere to put a sidecar stylesheet.
+
+`dist/devstudio.js` is committed rather than gitignored, which is unusual for a
+library and deliberate here: two of the three install routes above fetch the
+built file straight from the repo, so a source-only repo would leave the
+bookmarklet with nothing to point at. Rebuild and commit it with any source
+change.
