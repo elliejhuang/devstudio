@@ -373,17 +373,24 @@
 }
 
 
+/* A floating panel, not a full-height rail. Anchored to the viewport edges it
+   ran straight over the bottom toolbar, so opening the notes hid the very
+   buttons you needed to close them again — including the one that opened the
+   tray in the first place. It now stops 84px short of the bottom, which clears
+   the 48px toolbar and its 20px offset with room to spare. */
 .devstudio__tray {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  top: 20px;
+  right: 20px;
+  bottom: 84px;
   width: 320px;
   background: #fff;
-  border-left: 1px solid #d0d0d0;
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .devstudio__tray-header {
